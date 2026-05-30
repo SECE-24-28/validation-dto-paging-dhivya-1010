@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
@@ -30,6 +31,7 @@ public class Student {
 //    }
 
     @Autowired
+    @Qualifier("Pen")
     Writer w;
 
     public void setAge(int age) {
