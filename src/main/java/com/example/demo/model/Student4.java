@@ -17,5 +17,4 @@ public class Student4 {
     private String gender;
     private String tech;
 
-
 }

@@ -41,4 +41,8 @@ public class StudentService4 {
         sr4.deleteAll();
         return "everything deleted";
     }
+
+    public List<Student4> getCustomStud4(String gender,String tech) {
+        return sr4.findByGenderAndTech(gender, tech);
+    }
 }
