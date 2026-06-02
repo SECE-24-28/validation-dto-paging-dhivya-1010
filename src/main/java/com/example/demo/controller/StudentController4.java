@@ -62,11 +62,19 @@ QUERY - native query and jpql query
  */
 
     //1. NATIVE QUERY
-    @GetMapping("student4/filter")
+    @PostMapping("student4/filter")
     public List<Student4> getStudentByNameAndGen(@Param("gender") String gender, @Param("tech") String tech){
         return s4.getStudentByGenAndTech(gender,tech);
+    }
+
+    //2. JPQL
+    @GetMapping("student4/jpql")
+    public  List<Student4> getStudentByName(){
+        return  s4.getStudentByName();
     }
 
 
 }
 
+//custom queries - using method 1 way , using queries 2 ways - abstract method
+//JPQ - entity query
