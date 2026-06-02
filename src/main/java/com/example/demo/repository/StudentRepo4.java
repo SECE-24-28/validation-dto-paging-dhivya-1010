@@ -24,3 +24,10 @@ public interface StudentRepo4 extends JpaRepository<Student4,Integer> {
     @Query("select s from Student4 s where s.getName=:'vaz'") // student is an entity here  s.getName - reference.getName - object, getter, setter blah blah
     List<Student4> findByName();
 }
+/*
+    DTO req, resp - validation and restriction
+    relationship
+    pagination
+    logging
+    spring secutity - jwt (authentication, authorization)
+ */
