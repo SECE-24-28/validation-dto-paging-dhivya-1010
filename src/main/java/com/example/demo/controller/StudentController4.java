@@ -26,7 +26,7 @@ public class StudentController4 {
     }
 
     @PostMapping("addStudent4")
-    public String addStud4(@RequestBody Student4 std4){
+    public String addStud4(@Valid @RequestBody Student4 std4){
 
         return s4.addStud4(std4);
     }
