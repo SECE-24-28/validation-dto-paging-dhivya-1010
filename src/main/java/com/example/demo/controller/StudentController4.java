@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import com.example.demo.model.Student4;
 import com.example.demo.service.StudentService4;
+import jakarta.validation.Valid;
 import org.hibernate.validator.constraints.ParameterScriptAssert;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
@@ -69,8 +70,8 @@ QUERY - native query and jpql query
 
     //2. JPQL
     @GetMapping("student4/jpql")
-    public  List<Student4> getStudentByName(){
-        return  s4.getStudentByName();
+    public  List<Student4> getStudentByName(@RequestParam String name){
+        return  s4.getStudentByName(name);
     }
 
 

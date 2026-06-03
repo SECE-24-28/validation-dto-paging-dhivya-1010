@@ -54,7 +54,7 @@ public class StudentService4 {
         return sr4.findByGenAndTech(gender, tech);
     }
 
-    public List<Student4> getStudentByName() {
-        return sr4.findByName();
+    public List<Student4> getStudentByName(String name) {
+        return sr4.findByName(name);
     }
 }

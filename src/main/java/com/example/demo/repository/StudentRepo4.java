@@ -21,8 +21,8 @@ public interface StudentRepo4 extends JpaRepository<Student4,Integer> {
 
 
     //3. JPL QUERY - DEFAULT - WORKS ON FIELDS/ENTITIS
-    @Query("select s from Student4 s where s.getName=:'vaz'") // student is an entity here  s.getName - reference.getName - object, getter, setter blah blah
-    List<Student4> findByName();
+    @Query("select s from Student4 s where s.name=:name") // student is an entity here  s.getName - reference.getName - object, getter, setter blah blah
+    List<Student4> findByName(@Param("name") String name);
 }
 /*
     DTO req, resp - validation and restriction
